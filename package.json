@@ -2,11 +2,14 @@
   "name": "portfolio_aryarizal",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://isvarya27.github.io/Portfolio_AryaRizal",
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "next": "16.0.0",
