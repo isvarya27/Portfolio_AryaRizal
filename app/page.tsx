@@ -1,37 +1,65 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+export default function HomePage() {
   return (
-    <main
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "100vh",
-        fontFamily: "sans-serif",
-        textAlign: "center",
-      }}
-    >
-      <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
-        Arya Rizal
-      </h1>
-      <p style={{ fontSize: "1.2rem", maxWidth: 500 }}>
-        👋 Halo! Saya seorang Flutter & Fullstack Developer.  
-        Ini adalah portfolio saya yang dibuat menggunakan <b>Next.js + TypeScript</b>.
-      </p>
-      <a
-        href="https://github.com/isvarya27"
-        target="_blank"
-        style={{
-          marginTop: "2rem",
-          color: "#0070f3",
-          textDecoration: "none",
-          fontWeight: "bold",
-        }}
+    <main className="flex flex-col items-center justify-center min-h-screen px-6 py-16 md:px-10 bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-950 text-center">
+      
+      {/* Foto Profil */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9, y: 10 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative mb-10 md:mb-12"
       >
-        👉 Lihat GitHub Saya
-      </a>
+        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-400 blur-2xl opacity-30"></div>
+        <Image
+          src="/profile.jpg"
+          alt="Arya Rizal"
+          width={220}
+          height={220}
+          className="rounded-full shadow-xl object-cover relative z-10 border-4 border-white dark:border-gray-800"
+          priority
+        />
+      </motion.div>
+
+      {/* Nama & Bio */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="max-w-md flex flex-col items-center"
+      >
+        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
+          Arya Rizal 👋
+        </h1>
+
+        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
+          Seorang <span className="font-semibold text-blue-600">Flutter</span> &
+          <span className="font-semibold text-blue-600"> Fullstack Developer</span> yang fokus pada pengembangan aplikasi modern, efisien, dan elegan.
+        </p>
+
+        {/* Tombol Aksi */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
+        <a
+          href="/Arya_Rizal_Nurhakim_Portfolio.pdf"
+          download
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg text-sm md:text-base"
+        >
+          Download CV
+        </a>
+
+          <Link
+            href="/projects"
+            className="border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 px-6 py-3 rounded-xl transition-all text-sm md:text-base"
+          >
+            Lihat Projects
+          </Link>
+        </div>
+      </motion.div>
     </main>
   );
 }
