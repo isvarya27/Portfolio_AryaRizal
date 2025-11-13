@@ -1,5 +1,9 @@
 1:"$Sreact.fragment"
-2:I[97367,["/Portfolio_AryaRizal/_next/static/chunks/ff1a16fafef87110.js","/Portfolio_AryaRizal/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
-3:"$Sreact.suspense"
-0:{"buildId":"u382y7RsX4e3rhkKFdr0L","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"max-w-3xl mx-auto space-y-4","children":[["$","h1",null,{"className":"text-3xl font-bold mb-4","children":"Tentang Saya"}],["$","p",null,{"children":"Saya Arya Rizal, seorang Flutter & Fullstack Developer yang fokus pada pembuatan aplikasi berkualitas tinggi dengan pendekatan clean architecture dan efisiensi performa."}],["$","p",null,{"children":"Pengalaman saya meliputi pengembangan aplikasi mobile dengan Flutter, backend dengan Node.js, serta deployment di Google Cloud Platform (GCP) menggunakan Kubernetes (GKE)."}],["$","p",null,{"children":"Saya percaya bahwa aplikasi yang baik tidak hanya harus berfungsi dengan baik, tetapi juga memiliki desain yang rapi dan struktur kode yang mudah dipelihara."}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
-4:null
+2:I[47257,["/Portfolio_AryaRizal/_next/static/chunks/ff1a16fafef87110.js","/Portfolio_AryaRizal/_next/static/chunks/247eb132b7f7b574.js"],"ClientPageRoot"]
+3:I[60078,["/Portfolio_AryaRizal/_next/static/chunks/4d14796a0abf1602.js","/Portfolio_AryaRizal/_next/static/chunks/4405de5244c0125a.js","/Portfolio_AryaRizal/_next/static/chunks/4ac15a6332f74a69.js"],"default"]
+6:I[97367,["/Portfolio_AryaRizal/_next/static/chunks/ff1a16fafef87110.js","/Portfolio_AryaRizal/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"buildId":"sp3DkjK_4lrpBGIWBBl61","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/Portfolio_AryaRizal/_next/static/chunks/4405de5244c0125a.js","async":true}],["$","script","script-1",{"src":"/Portfolio_AryaRizal/_next/static/chunks/4ac15a6332f74a69.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+4:{}
+5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null
