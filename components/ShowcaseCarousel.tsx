@@ -16,7 +16,7 @@ export default function ShowcaseCarousel({ images, isMobile }: { images: string[
         >
           <div
             className={`relative rounded-2xl overflow-hidden shadow-xl ${
-              isMobile ? "w-[200px] aspect-[9/19]" : "w-[400px] aspect-video"
+              isMobile ? "w-[200px] aspect-[9/19]" : "w-[300px] aspect-video"
             }`}
           >
             <Image

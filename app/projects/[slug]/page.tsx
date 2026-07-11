@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ShowcaseCarousel from "@/components/ShowcaseCarousel";
 
-// ✅ Static params agar halaman pre-render
+// ✅ Static params so the page pre-renders
 export async function generateStaticParams() {
   return projects.map((p) => ({
     slug: p.slug,
@@ -19,18 +19,18 @@ export default async function ProjectDetail({
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
-    console.warn("Project tidak ditemukan:", slug);
+    console.warn("Project not found:", slug);
     return (
       <div className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <h2 className="text-2xl font-semibold mb-2">Project tidak ditemukan 😢</h2>
+        <h2 className="text-2xl font-semibold mb-2">Project not found 😢</h2>
         <Link href="/projects" className="text-blue-600 hover:underline mt-2">
-          ← Kembali ke daftar project
+          ← Back to project list
         </Link>
       </div>
     );
   }
 
-  // ✅ Jika BOTH → dianggap MOBILE untuk tampilan
+  // ✅ If BOTH → treated as MOBILE for display purposes
   const isMobile =
     project.type === ProjectType.MOBILE || project.type === ProjectType.BOTH;
   const isWeb =
@@ -38,7 +38,7 @@ export default async function ProjectDetail({
 
   return (
     <main className="max-w-4xl mx-auto px-6 py-12 space-y-10">
-      {/* Judul dan Deskripsi */}
+      {/* Title and Description */}
       <div className="text-center">
         <h1 className="text-3xl md:text-4xl font-extrabold mb-3 text-gray-900 dark:text-white">
           {project.title}
@@ -62,7 +62,7 @@ export default async function ProjectDetail({
         </div>
       </div>
 
-      {/* ✅ Cover Gambar */}
+      {/* ✅ Cover Image */}
       <div className="flex justify-center">
         {isMobile ? (
           <div className="relative bg-gray-900 rounded-[3rem] p-4 shadow-2xl w-[250px] md:w-[300px] aspect-[9/19] flex items-center justify-center">
@@ -99,10 +99,10 @@ export default async function ProjectDetail({
         <ShowcaseCarousel images={project.gallery} isMobile={isMobile} />
       </section>
 
-      {/* Teknologi */}
+      {/* Technologies */}
       <div>
         <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">
-          Teknologi yang digunakan:
+          Technologies Used:
         </h2>
         <ul className="flex flex-wrap gap-2 justify-center md:justify-start">
           {project.tech.map((tech) => (
@@ -116,16 +116,16 @@ export default async function ProjectDetail({
         </ul>
       </div>
 
-      {/* Link ke GitHub */}
-      <div className="text-center pt-6">
+      {/* Link to GitHub */}
+      {/* <div className="text-center pt-6">
         <Link
           href={project.link}
           target="_blank"
           className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all shadow-md hover:shadow-lg"
         >
-          🔗 Lihat Project di GitHub
+          🔗 View Project on GitHub
         </Link>
-      </div>
+      </div> */}
     </main>
   );
 }

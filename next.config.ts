@@ -1,16 +1,16 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
 const repoName = "Portfolio_AryaRizal";
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   output: "export",
   basePath: isProd ? `/${repoName}` : "",
   assetPrefix: isProd ? `/${repoName}/` : "",
   images: {
-    unoptimized: true, // wajib diaktifkan untuk GitHub Pages
+    unoptimized: true,
   },
-  trailingSlash: true, // tambahan ini opsional tapi direkomendasikan
+  trailingSlash: false, // Ubah ke false atau hapus
 };
 
 export default nextConfig;

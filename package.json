@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://isvarya27.github.io/Portfolio_AryaRizal",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "deploy": "gh-pages -d out"
-  },
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "predeploy": "npm run build",
+      "deploy": "touch out/.nojekyll && gh-pages -d out -t"
+    },
+  
   "dependencies": {
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
